@@ -73,9 +73,9 @@ Feature: Modulops deploywarn
 
   Scenario: By default, search configuration in home directory
     When I successfully run `modulops deploywarn test`
-    Then the output should contain "No configuration found at /app/tmp/aruba/.modulops_database.json"
+    Then the output should match %r<No configuration found at .*/.modulops_database.json>
 
   Scenario: Search configuration in given path
-    Given the configuration path is '/app/plop/test.json'
+    Given the configuration path is 'plop/test.json'
     When I successfully run `modulops deploywarn test`
-    Then the output should contain "No configuration found at /app/plop/test.json"
+    Then the output should contain "No configuration found at plop/test.json"
