@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'modulops/cli'
+
+Modulops::CLI.start

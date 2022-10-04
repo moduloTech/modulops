@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  app:
+    image: modulotechgroup/warnfordeployment:test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
